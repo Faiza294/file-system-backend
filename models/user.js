@@ -17,8 +17,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: true,
-    select: false
+    required: true
   },
   profile_image_url: {
     type: String,

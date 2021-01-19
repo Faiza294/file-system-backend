@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ddc0412-d10e-44fa-ab68-86b1ed6be0da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/passport-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
     </list>
@@ -27,11 +30,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Fiver\file-system\file-system-backend" />
+      <recent name="E:\Fiver\file-system\file-system-backend\config" />
       <recent name="E:\Fiver\file-system\file-system-backend\routes" />
       <recent name="E:\Fiver\file-system\file-system-backend\controllers" />
       <recent name="E:\Fiver\file-system\file-system-backend\models" />
@@ -51,7 +57,8 @@
       <workItem from="1610016171163" duration="6238000" />
       <workItem from="1610087902195" duration="699000" />
       <workItem from="1610946155970" duration="8514000" />
-      <workItem from="1611042892329" duration="10971000" />
+      <workItem from="1611042892329" duration="12440000" />
+      <workItem from="1611071447808" duration="1668000" />
     </task>
     <servers />
   </component>
