@@ -6,12 +6,12 @@ const answerSchema = new Schema({
     type: String,
     required: true,
   },
-    user_id: {
+    user: {
     type:mongoose.Schema.Types.ObjectId,
     ref:'User',
     required: true,
   },
-  question_id: {
+  question: {
     type:mongoose.Schema.Types.ObjectId,
     ref:'Question',
     required: true,

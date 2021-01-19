@@ -1,7 +1,7 @@
 const Answer = require('../models/answer');
 
 const find_all = (req, res) => {
-  Answer.find().sort({ createdAt: -1 })
+  Answer.find().populate('user').populate('question').sort({ createdAt: -1 })
     .then(result => {
       if (result.length > 0){
         return res.send({
@@ -26,7 +26,7 @@ const find_all = (req, res) => {
 
 const find_by_id = (req, res) => {
   const id = req.params.id;
-  Answer.findById(id)
+  Answer.findById(id).populate('user').populate('question')
     .then(result => {
       if (result) {
         return res.send({
@@ -49,24 +49,33 @@ const find_by_id = (req, res) => {
     });
 }
 
+const find_by_user_id = (req, res) => {
+  const id = req.params.id;
+  Answer.find({user:id}).populate('user').populate('question')
+      .then(result => {
+        if (result) {
+          return res.send({
+            success: true,
+            data: result
+          })
+        } else {
+          return res.send({
+            success: false,
+            data: "No data found"
+          })
+        }
+      })
+      .catch(err => {
+        console.log(err);
+        return res.send({
+          success: false,
+          data: err
+        })
+      });
+}
+
 const create_answer = (req, res) => {
   let answer = new Answer(req.body)
-  // user = req.params;
-  // id = user.id;
-  // const { title, subtitle} = req.body;
-  // const post = await Post.create({
-  //   title,
-  //   subtitle,
-  //   user:id
-  // });
-  // await post.save();
-  //
-  // const userById = await User.findById(id);
-  //
-  // userById.posts.push(post);
-  // await userById.save();
-  //
-  // return res.send(userById);
   answer.save()
     .then(result => {
       return res.send({
@@ -111,6 +120,7 @@ const delete_answer = (req, res) => {
 module.exports = {
   find_all,
   find_by_id,
+  find_by_user_id,
   create_answer,
   delete_answer
 }
