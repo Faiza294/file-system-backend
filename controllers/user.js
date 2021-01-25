@@ -77,9 +77,9 @@ const delete_user = (req, res) => {
 }
 
 const sign_up = (req, res) => {
-  const {education, experience, email, password} = req.body
-  if (!education || education.length === 0) { return res.send({ success: false, message: 'Education missing' }) }
-  if (!experience || experience.length === 0) { return res.send({ success: false, message: 'Experience missing' }) }
+  const {email, password} = req.body
+  // if (!education || education.length === 0) { return res.send({ success: false, message: 'Education missing' }) }
+  // if (!experience || experience.length === 0) { return res.send({ success: false, message: 'Experience missing' }) }
 
   User.find({email : email})
       .then(async result => {
