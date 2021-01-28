@@ -6,6 +6,10 @@ const answerSchema = new Schema({
     type: String,
     required: true,
   },
+  is_video: {
+    type: Boolean,
+    default: false
+  },
     user: {
     type:mongoose.Schema.Types.ObjectId,
     ref:'User',

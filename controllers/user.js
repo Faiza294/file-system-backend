@@ -54,7 +54,12 @@ const update_user = async (req, res) => {
         updateUser(req.body)
       } } })
   async function updateUser(user) {
-    await User.findByIdAndUpdate(user.id, {$set: user}, (err, resp) => {
+    const {education, experience} = user
+    let arrUpdates = {}
+    if (education) { arrUpdates.education = JSON.parse(user.education); delete user.education }
+    if (experience) { arrUpdates.experience = JSON.parse(user.experience); delete user.experience }
+
+    await User.findByIdAndUpdate(user.id, {$set: user, $addToSet: arrUpdates}, (err, resp) => {
       if(err) {
         return res.send({
           success: false,
